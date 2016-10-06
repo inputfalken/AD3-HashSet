@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 
 namespace ADHashTable {
-    class WordExtracter {
+    internal class WordExtracter {
         private string FilePath { get; }
 
         public List<string> Words { get; }
