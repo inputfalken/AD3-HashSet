@@ -16,7 +16,7 @@ namespace ADHashTable {
             Words = new List<string>();
             using (var reader = new StreamReader(FilePath, Encoding.Default)) {
                 var line = "";
-                while (line != null) {
+                while (!reader.EndOfStream) {
                     if (line != "") {
                         foreach (var word in line.Split(' ')) {
                             if (word != string.Empty) {
