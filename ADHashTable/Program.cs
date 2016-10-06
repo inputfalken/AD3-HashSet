@@ -13,8 +13,8 @@ namespace ADHashTable {
             var commonWordSet = new WordExtracter("ordlista.txt",
                 new HashSet<string>(StringComparer.InvariantCultureIgnoreCase));
 
-            foreach (var word in boyeSet.Collection) {
-                if (!commonWordSet.Collection.Contains(word)) {
+            foreach (var word in boyeSet) {
+                if (!commonWordSet.Contains(word)) {
                     Console.WriteLine(word);
                 }
             }
