@@ -16,6 +16,7 @@ namespace ADHashTable {
                     Console.WriteLine(word);
                 }
             }
+            Console.WriteLine($"Boyset word count {boyeSet.Count}, Common words count {commonWordSet.Count}");
         }
 
         private static HashSet<string> CreateStringHashSet()
