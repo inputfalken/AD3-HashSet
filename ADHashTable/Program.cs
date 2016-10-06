@@ -8,10 +8,8 @@ using System.Threading.Tasks;
 namespace ADHashTable {
     internal static class Program {
         private static void Main(string[] args) {
-            var boyeSet = new WordExtracter("boye.txt",
-                new HashSet<string>(StringComparer.InvariantCultureIgnoreCase));
-            var commonWordSet = new WordExtracter("ordlista.txt",
-                new HashSet<string>(StringComparer.InvariantCultureIgnoreCase));
+            var boyeSet = new WordExtracter("boye.txt", CreateStringHashSet());
+            var commonWordSet = new WordExtracter("ordlista.txt", CreateStringHashSet());
 
             foreach (var word in boyeSet) {
                 if (!commonWordSet.Contains(word)) {
@@ -19,5 +17,8 @@ namespace ADHashTable {
                 }
             }
         }
+
+        private static HashSet<string> CreateStringHashSet()
+            => new HashSet<string>(StringComparer.InvariantCultureIgnoreCase);
     }
 }
